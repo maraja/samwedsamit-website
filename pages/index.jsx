@@ -79,7 +79,7 @@ const ShowInvite = ({ currentUrl, guestListLastUpdatedAt, guest }) => {
 
   console.log("sakura", Sakura);
 
-  const sakura = new Sakura("body", {
+  const sakura = new Sakura("hero", {
     colors: [
       {
         gradientColorStart: "rgba(255, 183, 197, 0.9)",
@@ -122,7 +122,7 @@ const ShowInvite = ({ currentUrl, guestListLastUpdatedAt, guest }) => {
         author={resolvePath("/")}
       />
       {/* <FallingLeaves /> */}
-      <section className='header_area'>
+      <section id='hero' className='header_area'>
         <div id='home' className='header_slider'>
           <div className='slick-list draggable'>
             <div className='slick-track' style={{ opacity: 1 }}>
