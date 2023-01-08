@@ -11,6 +11,8 @@ import guestList from "./guest_list.json";
 
 import Lottie from "lottie-react";
 import weddingFloralAnimation from "../animations/wedding-floral.json";
+import ornamentAnimation from "../animations/ornament.json";
+import weddingBands from "../animations/wedding-bands.json";
 
 import Sakura from "../public/assets/js/sakura.js";
 
@@ -135,15 +137,26 @@ const ShowInvite = ({ currentUrl, guestListLastUpdatedAt, guest }) => {
                 <div className='container'>
                   <div className='row justify-content-center'>
                     <div className='col-lg-12'>
+                      <Lottie
+                        animationData={weddingBands}
+                        loop={true}
+                        style={{
+                          display: "flex",
+                          bottom: 0,
+                          zIndex: "1",
+                          width: "150px",
+                          margin: "auto",
+                        }}
+                      />
                       <div
                         className='slider_content text-center'
                         style={{ paddingTop: 0 }}
                       >
-                        <img
+                        {/* <img
                           style={{ maxHeight: 60, margin: 25, marginTop: 0 }}
                           src={logo.headerLogo}
                           alt='logo'
-                        />
+                        /> */}
                         <h5
                           className='slider_sub_title'
                           data-animation='fadeInUp'
@@ -270,6 +283,17 @@ const ShowInvite = ({ currentUrl, guestListLastUpdatedAt, guest }) => {
 
       <section id='contact' className='contact_area'>
         <div className='container'>
+          <Lottie
+            animationData={ornamentAnimation}
+            loop={true}
+            style={{
+              display: "flex",
+              bottom: 0,
+              zIndex: "1",
+              width: "100%",
+              margin: "auto",
+            }}
+          />
           <div
             className='contact_wrapper wow fadeInUpBig'
             data-wow-duration='1.3s'
@@ -383,13 +407,13 @@ const ShowInvite = ({ currentUrl, guestListLastUpdatedAt, guest }) => {
 
         <Lottie
           animationData={weddingFloralAnimation}
-          loop={true}
+          loop={false}
           style={{
             display: "flex",
             bottom: 0,
             zIndex: "1",
-            width: "100%",
-            height: "100px",
+            width: "50%",
+            margin: "auto",
           }}
         />
       </section>
@@ -402,14 +426,17 @@ const ShowInvite = ({ currentUrl, guestListLastUpdatedAt, guest }) => {
         <div className='container'>
           <div className='footer_widget pt-50 pb-10 text-center'>
             <div className='footer_logo'>
-              {logo.footerLogo &&
-                (logo.footerLogoType === "mp4" ? (
-                  <video height='140' autoPlay muted loop>
-                    <source src={logo.footerLogo} type='video/mp4' />
-                  </video>
-                ) : (
-                  <img src={logo.footerLogo} />
-                ))}
+              <Lottie
+                animationData={weddingBands}
+                loop={true}
+                style={{
+                  display: "flex",
+                  bottom: 0,
+                  zIndex: "1",
+                  width: "150px",
+                  margin: "auto",
+                }}
+              />
             </div>
             <div className='footer_title'>
               <h3 className='title'>{coupleName}</h3>
@@ -423,20 +450,7 @@ const ShowInvite = ({ currentUrl, guestListLastUpdatedAt, guest }) => {
               marginBottom: 40,
             }}
           >
-            <small>
-              <a
-                style={{ color: "grey" }}
-                href='https://github.com/wzulfikar/nextjs-wedding-invite'
-              >
-                Built with&nbsp;
-                <object
-                  style={{ height: "0.5rem" }}
-                  data='/assets/images/heart.svg'
-                  type='image/svg+xml'
-                ></object>
-                &nbsp;using NextJS
-              </a>
-            </small>
+            <small>We're so excited to celebrate with you!</small>
           </div>
         )}
       </footer>
