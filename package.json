@@ -26,6 +26,7 @@
     "react-meta-tags": "^0.7.4",
     "react-qr-reader": "^2.2.1",
     "react-router-dom": "^5.1.2",
+    "sakura-js": "^1.1.1",
     "shortid": "^2.2.15",
     "swr": "^0.1.16"
   },

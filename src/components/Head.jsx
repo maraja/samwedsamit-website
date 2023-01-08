@@ -38,6 +38,7 @@ export default ({
       <link rel='stylesheet' href='/assets/css/default.css' />
       <link rel='stylesheet' href='/assets/css/style.css' />
       <link rel='stylesheet' href='/assets/css/falling_leaves.css' />
+      <link rel='stylesheet' href='/assets/css/sakura.min.css' />
 
       {/* FOR IE9 below */}
       {/* [if lt IE 9]> */}
@@ -45,6 +46,7 @@ export default ({
       <script src='/assets/js/vendor/modernizr-3.7.1.min.js'></script>
       <script src='/assets/js/bootstrap.min.js'></script>
       <script src='/assets/js/jquery.easing.min.js'></script>
+      <script src='/assets/js/sakura.min.js'></script>
     </Head>
   );
 };

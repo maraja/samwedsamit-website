@@ -12,6 +12,8 @@ import guestList from "./guest_list.json";
 import Lottie from "lottie-react";
 import weddingFloralAnimation from "../animations/wedding-floral.json";
 
+import Sakura from "../public/assets/js/sakura.js";
+
 const translateConfig = (appConfig, locale) => {
   if (!locale || locale === defaultLocale) {
     return appConfig;
@@ -75,6 +77,28 @@ const ShowInvite = ({ currentUrl, guestListLastUpdatedAt, guest }) => {
     endTime: calendarInfo.timeEndISO,
   };
 
+  console.log("sakura", Sakura);
+
+  const sakura = new Sakura("body", {
+    colors: [
+      {
+        gradientColorStart: "rgba(255, 183, 197, 0.9)",
+        gradientColorEnd: "rgba(255, 197, 208, 0.9)",
+        gradientColorDegree: 120,
+      },
+      {
+        gradientColorStart: "rgba(255,189,189)",
+        gradientColorEnd: "rgba(227,170,181)",
+        gradientColorDegree: 120,
+      },
+      {
+        gradientColorStart: "rgba(212,152,163)",
+        gradientColorEnd: "rgba(242,185,196)",
+        gradientColorDegree: 120,
+      },
+    ],
+  });
+
   return (
     <div>
       <style jsx global>
@@ -97,7 +121,7 @@ const ShowInvite = ({ currentUrl, guestListLastUpdatedAt, guest }) => {
         logo={resolvePath(ogTags.logo)}
         author={resolvePath("/")}
       />
-      <FallingLeaves />
+      {/* <FallingLeaves /> */}
       <section className='header_area'>
         <div id='home' className='header_slider'>
           <div className='slick-list draggable'>
