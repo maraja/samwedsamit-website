@@ -1,0 +1,41 @@
+{
+  "name": "html-template--uideck-wedding-day",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "sync-guest-list": "node ./scripts/guestListFromCsv.js guest_list.csv > pages/guest_list.json",
+    "now:deploy": "yarn sync-guest-list && now --prod"
+  },
+  "dependencies": {
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.26",
+    "@types/react-dom": "18.0.10",
+    "csv-parser": "^2.3.2",
+    "gensync": "^1.0.0-beta.1",
+    "i18n-js": "^3.5.1",
+    "lottie-react": "^2.3.1",
+    "next": "13.1.1",
+    "qrcode.react": "^1.0.0",
+    "react": "18.2.0",
+    "react-add-to-calendar": "^0.1.5",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-dom": "18.2.0",
+    "react-meta-tags": "^0.7.4",
+    "react-qr-reader": "^2.2.1",
+    "react-router-dom": "^5.1.2",
+    "shortid": "^2.2.15",
+    "swr": "^0.1.16"
+  },
+  "devDependencies": {
+    "babel-plugin-import": "^1.13.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "cross-env": "^5.1.1",
+    "now": "^16.7.3"
+  },
+  "peerDependencies": {
+    "gensync": "^1.0.0-beta.1"
+  }
+}
